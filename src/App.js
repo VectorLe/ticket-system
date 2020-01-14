@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route  } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+// import components
+import Navbar from "./components/navbar.component";
+import Sidebar from "./components/sidebar.component";
+import Dashboard from "./components/dashboard.component";
+import CreateTicket from "./components/create-ticket.component";
+import CreateUser from "./components/create-user.component";
+import ManageUsers from "./components/manage-users.component";
+import ManageProjects from "./components/manage-projects.component";
+import EditTicket from "./components/edit-ticket.component";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Navbar />
+        <div className="wrapper">
+            <Sidebar />
+            <div id="content">
+                <Route path="/" exact component={Dashboard} />
+                <Route path="/tickets/create" component={CreateTicket} />
+                <Route path="/manage-users" component={ManageUsers} />
+                <Route path="/users/create" component={CreateUser} />
+                <Route path="/manage-projects" component={ManageProjects} />
+                <Route path="/edit/:id" component={EditTicket} />
+            </div>
+        </div>
+    </Router>
   );
 }
 
-export default App;
