@@ -12,5 +12,5 @@
 
 ### Author
 
-[Vector Le][https://www.vectorle.xyz]
+[Vector Le](https://www.vectorle.xyz)
 
