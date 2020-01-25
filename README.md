@@ -1,6 +1,6 @@
 # Ticket System
 
-> Ticket system application built with the MERN stack to allow teams to manage bugs, requests, and other support tickets.
+> Ticket system application built with the MERN stack that allow teams to manage bugs, requests, and other support tickets.
 
 ![Ticket System](/public/assets/screenshots/ticket_system.png)
 
