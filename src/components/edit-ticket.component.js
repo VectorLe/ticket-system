@@ -19,15 +19,15 @@ export default class EditTicket extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = { 
-    		title: '',
-		    description: '',
-		    projectName: '',
-            assignee: '',
-		    priority: '',
-		    status: '',
-		    type: '',
-            users: [],
-            projects: []
+      		title: '',
+  		    description: '',
+  		    projectName: '',
+              assignee: '',
+  		    priority: '',
+  		    status: '',
+  		    type: '',
+              users: [],
+              projects: []
         };
     }
 
