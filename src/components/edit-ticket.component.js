@@ -22,12 +22,12 @@ export default class EditTicket extends Component {
       		title: '',
   		    description: '',
   		    projectName: '',
-              assignee: '',
+          assignee: '',
   		    priority: '',
   		    status: '',
   		    type: '',
-              users: [],
-              projects: []
+          users: [],
+          projects: []
         };
     }
 
