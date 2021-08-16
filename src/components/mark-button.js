@@ -22,7 +22,7 @@ export default class MarkButton extends React.Component {
 
 	componentDidMount() {
         // default state of ticket
-        axios.get('http://localhost:5000/tickets/'+this.props._id)
+        axios.get('http://localhost:5000/tickets/'+this.props.ticketID)
             .then(res => {
                 this.setState({
                     title: res.data.title,
@@ -76,7 +76,7 @@ export default class MarkButton extends React.Component {
             type: this.state.type
         }
 
-        axios.post('http://localhost:5000/tickets/update/' + this.props._id, ticket)
+        axios.post('http://localhost:5000/tickets/update/' + this.props.ticketID, ticket)
             .then(res => console.log(res.data));
             
         alert('Successfully updated.');
